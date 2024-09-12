@@ -12,13 +12,10 @@ const human_mark = "X"
 
 var is_game_end : bool = false
 
+#set up the board when the game first run
 func _ready():
 	for cell_count in range(9):
-		var cell = Cell.instantiate()
-		cell.main = self
-		$Cells.add_child(cell)
-		cells.append(cell)
-		cell.cell_updated.connect(_on_cell_updated)
+		setup_board()
 
 func _on_cell_updated(cell):
 	randomize()
@@ -31,9 +28,11 @@ func _on_cell_updated(cell):
 		start_win_animation(match_result)
 	
 	elif play_with == "AI" and turn == 1:
-		cells[int(minimax(board_state, ai_mark)["index"])].draw_cell()
+		use_minimax_for_AI(board_state)
 
-
+# minimax algorithm for ai
+# add explanatin later
+# tinatamad pa
 func minimax(board_state, current_player):
 	
 	var available_cells_indexes = getAllEmptyCellsIndexes(board_state)
@@ -73,6 +72,16 @@ func minimax(board_state, current_player):
 				best_score = all_test_play_info[n].score
 				best_test_play = n
 	return all_test_play_info[best_test_play]
+
+func use_minimax_for_AI(board_state):
+	cells[int(minimax(board_state, ai_mark)["index"])].draw_cell()
+
+func setup_board():
+	var cell = Cell.instantiate()
+	cell.main = self
+	$Cells.add_child(cell)
+	cells.append(cell)
+	cell.cell_updated.connect(_on_cell_updated)
 
 func check_if_winner_is_found(board_state, current_player): 
 	if ((board_state[0] == current_player and board_state[1] == current_player and board_state[2] == current_player) or 
