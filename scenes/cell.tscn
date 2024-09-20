@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bova5one0tgvu"]
 
-[ext_resource type="Script" path="res://cell.gd" id="1_jfgeh"]
+[ext_resource type="Script" path="res://Scripts/cell.gd" id="1_jfgeh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hhi4"]
 

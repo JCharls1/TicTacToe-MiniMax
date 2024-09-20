@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgtbpgksycu1a"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_0ni5y"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_c5cg1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocfh0"]
 bg_color = Color(0.458824, 0, 0, 1)
@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0ni5y")
+script = ExtResource("1_c5cg1")
 play_with = "AI"
 
 [node name="BG" type="ColorRect" parent="."]

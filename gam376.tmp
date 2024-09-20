@@ -1,0 +1,8 @@
+{"ai_moves": {
+		"move_1": {"index": "0", "score": "0"},
+		"move_2": {"index": "0", "score": "0"}
+	},
+	"win_counter": {
+		"human": "0",
+		"ai": "0"
+	}}

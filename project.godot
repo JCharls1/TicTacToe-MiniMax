@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Tic Tac Toe"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Icon.png"
+config/icon="res://misc/Icon.png"
+
+[autoload]
+
+save_manager="*res://Scripts/save_manager.gd"
+Minimax="*res://Scripts/minimax.gd"
 
 [display]
 
