@@ -7,7 +7,6 @@ const human_mark = "X"
 # add explanatin later
 # tinatamad pa
 func minimax(board_state, current_player):
-	
 	var available_cells_indexes = getAllEmptyCellsIndexes(board_state)
 	
 	if check_if_winner_is_found(board_state, human_mark):

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cppthxe1slvy6"]
+
+[ext_resource type="Script" path="res://scenes/History.gd" id="1_k3cts"]
+
+[node name="Window" type="Window"]
+size = Vector2i(185, 215)
+script = ExtResource("1_k3cts")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "History:"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

@@ -12,10 +12,14 @@ var ai = Minimax
 
 var is_game_end : bool = false
 
-var game_dict = {}
 var moves = []
+var game = []
+var player_moves = []
+var mywin = preload("res://scenes/History.tscn")
+
 #set up the board when the game first run
 func _ready():
+	set_up_history_window()
 	for cell_count in range(9):
 		setup_board()
 
@@ -24,20 +28,17 @@ func _on_cell_updated(cell):
 	randomize()
 	var board_state = getCurrentBoardState()
 	var match_result = checkIfWinnerIsFound()
-
+	
+	add_player_move(board_state)
 	if match_result:
 		is_game_end = true
-		start_win_animation(match_result)
-		game_dict['game'] = moves
-		print(game_dict)
-		save_manager.write_save(game_dict)
+		add_match_result_to_DB(match_result)
 	elif play_with == "AI" and turn == 1:
+		moves.append({"player": str(player_moves[player_moves.size()-1])})
 		moves.append(ai.minimax(board_state, ai_mark))
 		use_minimax_for_AI(board_state)
-		print(moves)
 
 func use_minimax_for_AI(board_state):
-	print(ai.minimax(board_state, ai_mark))
 	cells[int(ai.minimax(board_state, ai_mark)["index"])].draw_cell()
 
 func setup_board():
@@ -60,8 +61,6 @@ func getCurrentBoardState():
 
 func checkIfWinnerIsFound():
 	var match_result = check_match()
-	#if(match_result != null):
-		#print(match_result[0])
 	return match_result
 
 func check_match():
@@ -94,6 +93,33 @@ func check_match():
 	
 	if full: return["Draw", 0, 0, 0]
 
+func add_match_result_to_DB(match_result):
+	for i in save_manager.read_save().size():
+		#print(i)
+		#print(save_manager.read_save()[i])
+		game.append(save_manager.read_save()[i])
+	if match_result[0] == "Draw":
+		game.append(match_result[0])
+	else:
+		game.append("Winner: "+match_result[0])
+	game.append(moves)
+	save_manager.write_save('')
+	save_manager.write_save(game)
+	print(game)
+
+func add_player_move(board_state):
+	for i in board_state.size():
+		if board_state[i] == "X" and not player_moves.has(i):
+			player_moves.append(i)
+
+func set_up_history_window():
+	get_viewport().set_embedding_subwindows(false)
+	var d = mywin.instantiate()
+	add_child(d)
+	d.visible = true
+	d.position = Vector2(800, 800)
+	d.title = "History"
+	d.size = Vector2(300, 200)
 
 func _on_restart_button_pressed():
 	get_tree().reload_current_scene()
@@ -108,3 +134,8 @@ func start_win_animation(match_result: Array):
 	
 	for c in range(3):
 		cells[match_result[c+1]-1].glow(color)
+
+
+func _on_reset_db_pressed():
+	save_manager.write_save([""])
+	get_tree().reload_current_scene()

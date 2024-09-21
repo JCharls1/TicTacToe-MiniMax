@@ -47,11 +47,12 @@ columns = 3
 
 [node name="RestartButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = -1
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.411
 anchor_bottom = 1.0
 offset_top = -25.0
+offset_right = 0.0879974
 grow_horizontal = 2
 grow_vertical = 0
 mouse_default_cursor_shape = 2
@@ -66,4 +67,21 @@ text = "Restart"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_4d651")
 
+[node name="ResetDB" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.0
+offset_top = -25.0
+offset_right = -4.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Reset DB"
+
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="ResetDB" to="." method="_on_reset_db_pressed"]

@@ -1,7 +1,7 @@
 extends Node
 
 var json = JSON.new()
-var path = "res://data.json"
+var path = "res://misc/data.json"
 
 var data = {}
 
@@ -14,6 +14,8 @@ func write_save(content):
 func read_save():
 	var file = FileAccess.open(path, FileAccess.READ)
 	var content = json.parse_string(file.get_as_text())
+	file.close()
+	file = null
 	return content
 
 func create_new_save_file():
@@ -23,6 +25,7 @@ func create_new_save_file():
 	write_save(content)
 
 #func _ready():
+	#print(read_save())
 	#create_new_save_file()
 	#var test_data = {
 		#"ai_moves": {
@@ -34,6 +37,6 @@ func create_new_save_file():
 			#"ai": "0"
 		#}
 	#}
-	
+	#
 	#write_save(test_data)
 	
