@@ -1,1 +1,1 @@
-how to use: <br/> asdsda
+how to use: <br/> clone this repository <br/> git clone https://github.com/JCharls1/TicTacToe-MiniMax.git <br/> locate where you cloned the project <br/> locate "nicnacnoeEXE" folder then open the application.
