@@ -8,7 +8,7 @@
 <br/> Pantonia, John Carlo 
 <br/> Salamat, Rolph 
 <br/> Saturno, M-jey 
-<br/><br/>## Quick start 
+<br/><br/> ## Quick start 
 <br/> **1. clone this repository** 
 <br/> 
 ```console 
