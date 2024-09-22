@@ -18,14 +18,14 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 
 ## Build the project on your computer
 **1. Download Godot https://godotengine.org/download/windows/** <br/>
-![screenshot](./Screenshots/GodotDownload.png)
+![screenshot](./Screenshots/GodotDownload.png)<br/>
 **2. Clone this repository**<br/>
 ```console 
 $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 ```
 **3. Extract Godot and run the software**<br/>
-![screenshot](./Screenshots/ExtractGodot.png)
+![screenshot](./Screenshots/ExtractGodot.png)<br/>
 **4. Click import > location of the cloned repository > godot.project**<br/>
-![screenshot](./Screenshots/ImportGodot.png)
-![screenshot](./Screenshots/SelectGodotProject.png) 
+![screenshot](./Screenshots/ImportGodot.png)<br/>
+![screenshot](./Screenshots/SelectGodotProject.png)<br/> 
 **5. Press run**<br/>
