@@ -1,7 +1,7 @@
 # TicTacToe - Minimax - DB
 A tic tac toe game made in godot that uses an algorithm called 'minimax' to make the AI opponent impossible to defeat<br/>
 ![screenshot](./Screenshots/GameScreenshot.png)<br/>
-
+<br/>
 ## **Presented by:** 
 Abayari, Rob Fritz <br/>
 De jesus, Michael Ivan <br/>
@@ -19,7 +19,7 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 ```
 **2. locate where you cloned the project** <br/> 
 **3. locate "nicnacnoeEXE" folder then open the application.**
-
+<br/>
 ## Build the project on your computer
 **1. Download Godot https://godotengine.org/download/windows/** <br/>
 ![screenshot](./Screenshots/GodotDownload.png)<br/>
@@ -33,3 +33,7 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 ![screenshot](./Screenshots/ImportGodot.png)<br/>
 ![screenshot](./Screenshots/SelectGodotProject.png)<br/> 
 **5. Press run**<br/>
+<br/>
+# References
+- open source Godot project from https://github.com/NeonfireStudio/Tic-Tac-Toe_In_Godot-4.git
+- Minimax implementation https://www.neverstopbuilding.com/blog/minimax 
