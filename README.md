@@ -1,4 +1,5 @@
-# **Presented by:** 
+#TicTacToe - Minimax - DB
+## **Presented by:** 
 Abayari, Rob Fritz <br/>
 De jesus, Michael Ivan <br/>
 Duhaylungsod, Kyziah Mae <br/>
