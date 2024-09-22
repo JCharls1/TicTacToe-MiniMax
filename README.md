@@ -18,6 +18,7 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 
 ## Build the project on your computer
 **1. Download Godot https://godotengine.org/download/windows/** <br/>
+![screenshot](./Screenshots/GodotDownload.png)
 **2. Clone this repository**<br/>
 ```console 
 $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
