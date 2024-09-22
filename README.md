@@ -1,4 +1,4 @@
-#TicTacToe - Minimax - DB
+# TicTacToe - Minimax - DB
 A tic tac toe game made in godot that uses an algorithm called 'minimax' to make the AI opponent impossible to defeat<br/>
 ![screenshot](./Screenshots/GameScreenshot.png)<br/>
 
