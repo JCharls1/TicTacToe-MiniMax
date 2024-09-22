@@ -24,5 +24,8 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 ```
 **3. Extract Godot and run the software**<br/>
+![screenshot](./Screenshots/ExtractGodot.png)
 **4. Click import > location of the cloned repository > godot.project**<br/>
+![screenshot](./Screenshots/ImportGodot.png)
+![screenshot](./Screenshots/SelectGodotProject.png) 
 **5. Press run**<br/>
