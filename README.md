@@ -17,11 +17,11 @@ $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 **3. locate "nicnacnoeEXE" folder then open the application.**
 
 ## Build the project on your computer
-**1. Download Godot https://godotengine.org/download/windows/**
-**2. Clone this repository**
+**1. Download Godot https://godotengine.org/download/windows/** <br/>
+**2. Clone this repository**<br/>
 ```console 
 $ git clone https://github.com/JCharls1/TicTacToe-MiniMax.git
 ```
-**3. Extract Godot and run the software**
-**4. Click import > location of the cloned repository > godot.project**
-**5. Press run**
+**3. Extract Godot and run the software**<br/>
+**4. Click import > location of the cloned repository > godot.project**<br/>
+**5. Press run**<br/>
